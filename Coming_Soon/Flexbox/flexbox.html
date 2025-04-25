@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Masterclass</title>
+
+    <style>
+        body {
+            background-color: aqua;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+        }
+
+        .container {
+            margin: 30px auto;
+            width: 80%;
+            max-width: 900px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            font-size: 1.2em;
+            color: white;
+            text-align: center;
+        }
+
+        .pastel-1 { background-color: #f8b400; }
+        .pastel-2 { background-color: #7d7dff; }
+        .pastel-3 { background-color: #ff66cc; }
+        .pastel-4 { background-color: #4dff88; }
+        .pastel-5 { background-color: #ff6666; }
+
+        /* For "flex-direction: column" */
+        .flex-container[style*="flex-direction: column;"] {
+            flex-direction: column;
+        }
+
+        /* For "justify-content: space-between" */
+        .flex-container[style*="justify-content: space-between;"] {
+            justify-content: space-between;
+        }
+
+        /* For "align-items: center" */
+        .flex-container[style*="align-items: center;"] {
+            align-items: center;
+        }
+
+        /* For "flex-wrap: wrap" */
+        .flex-container[style*="flex-wrap: wrap;"] {
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flexbox MasterClass</h1>
+
+    <div class="container">
+        <h2>Default Flex (row)</h2>
+        <div class="flex-container">
+            <div class="circle pastel-1">1</div>
+            <div class="circle pastel-2">2</div>
+            <div class="circle pastel-3">3</div>
+            <div class="circle pastel-4">4</div>
+            <div class="circle pastel-5">5</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Direction: Column</h2>
+        <div class="flex-container" style="flex-direction: column;">
+            <div class="circle pastel-1">1</div>
+            <div class="circle pastel-2">2</div>
+            <div class="circle pastel-3">3</div>
+            <div class="circle pastel-4">4</div>
+            <div class="circle pastel-5">5</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Justify Content: Space</h2>
+        <div class="flex-container" style="justify-content: space-between;">
+            <div class="circle pastel-1">1</div>
+            <div class="circle pastel-2">2</div>
+            <div class="circle pastel-3">3</div>
+            <div class="circle pastel-4">4</div>
+            <div class="circle pastel-5">5</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Align Items: Center</h2>
+        <div class="flex-container" style="align-items: center;">
+            <div class="circle pastel-1">1</div>
+            <div class="circle pastel-2">2</div>
+            <div class="circle pastel-3">3</div>
+            <div class="circle pastel-4">4</div>
+            <div class="circle pastel-5">5</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Wrap: Wrap</h2>
+        <div class="flex-container" style="flex-wrap: wrap;">
+            <div class="circle pastel-1">1</div>
+            <div class="circle pastel-2">2</div>
+            <div class="circle pastel-3">3</div>
+            <div class="circle pastel-4">4</div>
+            <div class="circle pastel-5">5</div>
+        </div>
+    </div>
+</body>
+</html>
